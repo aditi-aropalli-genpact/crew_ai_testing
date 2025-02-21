@@ -17,8 +17,9 @@ def run():
     """
     Run the crew.
     """
+    user_input = input("Give user input:")
     inputs = {
-        'topic': 'AI LLMs',
+        'topic': user_input,
         'current_year': str(datetime.now().year)
     }
     
@@ -32,8 +33,9 @@ def train():
     """
     Train the crew for a given number of iterations.
     """
+    user_input = input()
     inputs = {
-        "topic": "AI LLMs"
+        "topic": user_input
     }
     try:
         Demo().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
